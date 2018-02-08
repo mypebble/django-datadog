@@ -19,6 +19,8 @@ CONFIGURED = {'DATADOG': {'ENABLED': True,
               'STATSD_HOST': 'localhost',
               'STATSD_PORT': '12334'}
 
+settings.configure()
+
 
 @mock.patch('django_datadog.compat.api')
 class EventTestCase(TestCase):
@@ -62,6 +64,7 @@ class EventTestCase(TestCase):
 class GaugeTestCase(TestCase):
     """Test DataDog Gauges.
     """
+
     @override_settings(**NOT_CONFIGURED)
     def test_not_configured(self, statsd):
         """Do not send events if not configured.
@@ -81,5 +84,4 @@ class GaugeTestCase(TestCase):
 
 
 if __name__ == '__main__':
-    settings.configure()
     main()

@@ -38,4 +38,5 @@ setup(
     install_requires=['six', 'datadog', 'django'],
     classifiers=CLASSIFIERS,
     long_description=LONG_DESCRIPTION,
+    test_suite='django_datadog.tests',
 )
