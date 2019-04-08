@@ -85,6 +85,29 @@ def create_gauge(title, value, tags=None, sample_rate=1):
     else:
         log_msg = '{}: %d'.format(title)
         logger.info(log_msg, value)
+        
+        
+def create_increment(title, tags=None):
+    """Create a statsd increment event for DataDog.
+
+    :type title: str
+    :param title: The metric to increment
+
+    :type tags: list
+    :param tags: The tags to attach to the metric for analysis
+    """
+    if init_datadog():
+        try:
+            statsd.increment(title, tags=tags)
+        except HTTPError as exc:
+            logger.error('DataDog returned error calling statsd %s',
+                         six.text_type(exc))
+        except Exception as exc:
+            logger.error('An unknown error occurred in gauge: %s',
+                         six.text_type(exc))
+    else:
+        log_msg = '{}: %d'.format(title)
+        logger.info(log_msg, value)
 
 
 def loglevel(log_level):

@@ -37,6 +37,8 @@ create_event('example.com.my_event',
              tags=['app:example'])
 
 create_gauge('example.com.my_gauge', value=25)
+
+create_increment('example.com.my_counter', tags=['my:tags'])
 ```
 
 And that's it!
