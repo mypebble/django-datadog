@@ -26,7 +26,7 @@ except Exception:
 
 setup(
     name='django-datadog',
-    version='0.0.1',
+    version='0.0.2',
     description="A simple DataDog Integration for Django",
     author="SF Software limited t/a Pebble",
     author_email="sysadmin@mypebble.co.uk",
