@@ -25,8 +25,8 @@ except Exception:
     LONG_DESCRIPTION = ''
 
 setup(
-    name='django-datadog',
-    version='0.0.1',
+    name='django-datadog-compatibility',
+    version='0.0.2',
     description="A simple DataDog Integration for Django",
     author="SF Software limited t/a Pebble",
     author_email="sysadmin@mypebble.co.uk",
