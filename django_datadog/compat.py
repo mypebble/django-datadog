@@ -104,7 +104,7 @@ def create_increment(metric, **kwargs):
                          six.text_type(exc))
     else:
         log_msg = '{}: %d'.format(metric)
-        logger.info(log_msg, value)
+        logger.info(log_msg)
 
 
 def loglevel(log_level):
