@@ -19,6 +19,7 @@ DATADOG = {
   'ENABLED': True,
   'API_KEY': 'xxxx',
   'APP_KEY': 'xxxx',
+  'API_HOST': 'xxxx',
 }
 
 STATSD_HOST = 'localhost'

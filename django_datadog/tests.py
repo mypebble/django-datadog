@@ -15,7 +15,8 @@ from django_datadog.compat import create_event, create_gauge
 NOT_CONFIGURED = {'DATADOG': {'ENABLED': False}}
 CONFIGURED = {'DATADOG': {'ENABLED': True,
                           'API_KEY': 'test',
-                          'APP_KEY': 'test'},
+                          'APP_KEY': 'test',
+                          'API_HOST': 'test',},
               'STATSD_HOST': 'localhost',
               'STATSD_PORT': '12334'}
 
